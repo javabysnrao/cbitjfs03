@@ -6,7 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 
 public class App {
     public static void main(String[] args) {
-       
+           System.out.println("App Started");
     	   DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();  
     	   XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
     	   reader.loadBeanDefinitions(new FileSystemResource("src/main/resources/beans.xml"));
