@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean id="msg" class="com.cbit.springcore_app1.PrintMessage"></bean>  
+  
+  <bean id="d" class="java.util.Date"></bean>  
+  
+  <bean id="emp" class="com.cbit.springcore_app1.Employee">
+    <property name="id" value="12345"></property>
+    <property name="name" value="Raja"></property>
+    <property name="salary" value="50000"></property>
+    <property name="nickNames">
+       <list>
+         <value>Chinnu</value>
+         <value>Mannu</value>
+         <value>Bannu</value>
+       </list>
+    </property>
+    <property name="address" ref="addrs"></property>
+    <property name="date" ref="d"></property>
+  </bean>
+  
+  <bean id="addrs" class="com.cbit.springcore_app1.Address">
+     <property name="doorNo" value="56-8/98"></property>
+     <property name="city" value="Chennai"></property>
+     <property name="state" value="Tamilnadu"></property>
+  </bean>  
+ 
+</beans>        
